@@ -723,27 +723,35 @@ class MultiSelect {
 
   // Static
 
-  static jQueryInterface(config) {
-    return this.each(function () {
-      let data = Data.getData(this, DATA_KEY)
-
-      if (!data) {
-        data = new Select(this)
+  static multiSelectInterface(element, config, par) {
+    let data = Data.getData(element, DATA_KEY)
+    if (!data) {
+      data = typeof config === 'object' ? new MultiSelect(element, config) : new MultiSelect(element)
+    }
+    if (typeof config === 'string') {
+      if (typeof data[config] === 'undefined') {
+        throw new TypeError(`No method named "${config}"`)
       }
-
       // eslint-disable-next-line default-case
-      switch (config) {
+      switch (config){
         case 'update':
-          data[config](this, par)
-          break
-        case 'dispose':
-        case 'open':
-        case 'close':
+        data[config](par)
+        break;
         case 'search':
-        case 'value':
-          data[config](this)
-          break
+        data[config]('')
+        break;
+        case 'dispose':
+        case 'show':
+        case 'hide':
+        data[config]()
+        break;
       }
+    }
+  }
+
+  static jQueryInterface(config, par) {
+    return this.each(function () {
+      MultiSelect.multiSelectInterface(this, config, par);
     })
   }
 
@@ -824,6 +832,12 @@ class MultiSelect {
 
 EventHandler.on(document, EVENT_CLICK_DATA_API, MultiSelect.clearMenus)
 EventHandler.on(document, EVENT_KEYUP_DATA_API, MultiSelect.clearMenus)
+EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
+  // eslint-disable-next-line unicorn/prefer-spread
+  Array.from(document.querySelectorAll(SELECTOR_COMPONENT)).forEach(element => {
+    MultiSelect.multiSelectInterface(element, Manipulator.getDataAttributes(element))
+  })
+})
 
 const $ = getjQuery()
 
