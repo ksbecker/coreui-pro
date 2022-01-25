@@ -1,0 +1,61 @@
+@import "./../functions";
+@import "./../mixins";
+@import "./../variables";
+@import "./../utilities";
+
+$theme-name: "legacy-theme" !default;
+$theme-prefix: "legacy" !default;
+
+.#{$theme-name} {
+  @import "legacy/variables";
+  @import "legacy/utilities";
+
+  // Colors
+  @each $color, $value in $theme-colors-lt {
+    --#{$variable-prefix}#{$color}: #{$value};
+  }
+  @each $color, $value in $grays-lt {
+    --#{$variable-prefix}#{$color}: #{$value};
+  }
+
+  // Gradients
+  @each $color, $map in $theme-gradients-lt {
+    --#{$variable-prefix}#{$color}-start: #{map-get($map, "start")};
+    --#{$variable-prefix}#{$color}-stop: #{map-get($map, "stop")};
+
+    .card.bg-#{$color}-gradient {
+      --#{$variable-prefix}card-border-color: #{map-get($map, "stop")};
+    }
+  }
+
+  @include theme($theme-map);
+
+  // Button variants
+
+  @each $state, $variant in $alert-variants-lt {
+    @include alert-variant($state, $variant, true);
+  }
+
+  // Button variants
+
+  @each $state, $variant in $button-variants-lt {
+    @include button-variant($state, $variant, true);
+  }
+
+  @each $state, $variant in $button-outline-ghost-variants-lt {
+    @include button-outline-variant($state, $variant, true);
+  }
+
+  @each $state, $variant in $button-outline-ghost-variants-lt {
+    @include button-ghost-variant($state, $variant, true);
+  }
+
+  // List group variants
+
+  @each $state, $variant in $list-group-variants-lt {
+    @include list-group-item-variant($state, $variant, true);
+  }
+
+  // Utilities
+  @import "./../utilities/api";
+}

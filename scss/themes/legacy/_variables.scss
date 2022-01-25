@@ -1,0 +1,813 @@
+// Color system
+
+// $gray-800-lt:   desaturate(#1a1b2c, 10%) !default;
+
+// fusv-disable
+$bg-elevation-0: #181924 !default;
+$bg-elevation-1:   rgba(mix(rgba(255, 255, 255, .1), $bg-elevation-0), 1) !default;
+$bg-elevation-2:   rgba(mix(rgba(255, 255, 255, .14), $bg-elevation-0), 1) !default;
+$bg-elevation-3:   rgba(mix(rgba(255, 255, 255, .16), $bg-elevation-0), 1) !default;
+$bg-elevation-4:   rgba(mix(rgba(255, 255, 255, .18), $bg-elevation-0), 1) !default;
+$bg-elevation-6:   rgba(mix(rgba(255, 255, 255, .22), $bg-elevation-0), 1) !default;
+$bg-elevation-8:   rgba(mix(rgba(255, 255, 255, .24), $bg-elevation-0), 1) !default;
+$bg-elevation-12:  rgba(mix(rgba(255, 255, 255, .28), $bg-elevation-0), 1) !default;
+$bg-elevation-16:  rgba(mix(rgba(255, 255, 255, .3), $bg-elevation-0), 1) !default;
+$bg-elevation-24:  rgba(mix(rgba(255, 255, 255, .32), $bg-elevation-0), 1) !default;
+// fusv-enable
+
+// scss-docs-start gray-color-variables
+$gray-base-lt:  #181b1e !default;
+$gray-100-lt:  #f0f3f5 !default;
+$gray-200-lt:  #e4e7ea !default;
+$gray-300-lt:  #c8ced3 !default;
+$gray-400-lt:  #acb4bc !default;
+$gray-500-lt:  #8f9ba6 !default;
+$gray-600-lt:  #73818f !default;
+$gray-700-lt:  #5c6873 !default;
+$gray-800-lt:  #2f353a !default;
+$gray-900-lt:  #23282c !default;
+// scss-docs-end gray-color-variables
+
+// fusv-disable
+// scss-docs-start gray-colors-map
+$grays-lt: (
+  "100": $gray-100-lt,
+  "200": $gray-200-lt,
+  "300": $gray-300-lt,
+  "400": $gray-400-lt,
+  "500": $gray-500-lt,
+  "600": $gray-600-lt,
+  "700": $gray-700-lt,
+  "800": $gray-800-lt,
+  "900": $gray-900-lt
+) !default;
+// scss-docs-end gray-colors-map
+// fusv-enable
+
+$high-emphasis-lt:    rgba($gray-base-lt, .87) !default;
+$medium-emphasis-lt:  rgba($gray-base-lt, .6) !default;
+$disabled-lt:         rgba($gray-base-lt, .38) !default;
+
+$primary-lt:    #20a8d8 !default;
+$secondary-lt:  #c8ced3 !default;
+$success-lt:    #4dbd74 !default;
+$info-lt:       #63c2de !default;
+$warning-lt:    #ffc107 !default;
+$danger-lt:     #f86c6b !default;
+$light-lt:      #f0f3f5 !default;
+$dark-lt:       #2f353a !default;
+
+// fusv-disable
+$theme-colors-lt: (
+  "primary":    $primary-lt,
+  "secondary":  $secondary-lt,
+  "success":    $success-lt,
+  "info":       $info-lt,
+  "warning":    $warning-lt,
+  "danger":     $danger-lt,
+  "light":      $light-lt,
+  "dark":       $dark-lt
+) !default;
+// fusv-enable
+
+// Gradients
+
+// scss-docs-start theme-gradients
+$primary-gradient-lt: (
+  "start":  tint-color($primary-lt, 5%),
+  "stop":   shade-color($primary-lt, 10%)
+) !default;
+
+$secondary-gradient-lt: (
+  "start":  tint-color($secondary-lt, 5%),
+  "stop":   shade-color($white, 10%)
+) !default;
+
+$light-gradient-lt: (
+  "start":  tint-color($light-lt, 5%),
+  "stop":   shade-color($white, 10%)
+) !default;
+
+$dark-gradient-lt: (
+  "start":  tint-color($dark-lt, 5%),
+  "stop":   shade-color($dark-lt, 10%)
+) !default;
+
+$danger-gradient-lt: (
+  "start":  tint-color($danger-lt, 5%),
+  "stop":   shade-color($danger-lt, 10%)
+) !default;
+
+$warning-gradient-lt: (
+  "start":  tint-color($warning-lt, 5%),
+  "stop":   shade-color($warning-lt, 10%)
+) !default;
+
+$success-gradient-lt: (
+  "start":  tint-color($success-lt, 5%),
+  "stop":   shade-color($success-lt, 10%)
+) !default;
+
+$info-gradient-lt: (
+  "start":  tint-color($info-lt, 5%),
+  "stop":   shade-color($info-lt, 10%)
+) !default;
+
+$theme-gradients-lt: (
+  "primary":    $primary-gradient-lt,
+  "secondary":  $secondary-gradient-lt,
+  "success":    $success-gradient-lt,
+  "info":       $info-gradient-lt,
+  "warning":    $warning-gradient-lt,
+  "danger":     $danger-gradient-lt,
+  "light":      $light-gradient-lt,
+  "dark":       $dark-gradient-lt
+) !default;
+// scss-docs-end theme-gradients
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg-lt:                   #e4e5e6 !default;
+$body-color-lt:                $high-emphasis-lt !default;
+$elevation-base-color-lt:      0, 0, 0 !default;
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$border-color-lt:   $gray-300-lt !default;
+
+$theme-root-lt: (
+  "body-bg":               $body-bg-lt,
+  "body-color":            $body-color-lt,
+  "elevation-base-color":  $elevation-base-color-lt,
+  "high-emphasis":         $high-emphasis-lt,
+  "medium-emphasis":       $medium-emphasis-lt,
+  "disabled":              $disabled-lt,
+  "border-color":          $border-color-lt
+) !default;
+
+// $component-color-lt:  $body-color-lt !default;
+// $component-bg-lt:     $gray-800-lt !default;
+
+$component-active-color-lt:  $white !default;
+$component-active-bg-lt:     $primary-lt !default;
+
+// Accordion
+
+$accordion-button-color-lt:               $body-color-lt !default;
+$accordion-button-bg-lt:                  transparent !default;
+$accordion-border-color-lt:               rgba($white, .125) !default;
+$accordion-bg-lt:                         transparent !default;
+
+
+$accordion-button-color-lt:               $body-color-lt !default;
+$accordion-button-bg-lt:                  transparent !default;
+$accordion-border-color-lt:               rgba($white, .125) !default;
+
+$accordion-button-active-bg-lt:           tint-color(rgba($component-active-bg-lt, .5), 5%) !default;
+$accordion-button-active-color-lt:        shade-color($component-active-color-lt, 10%) !default;
+
+$accordion-button-focus-border-color-lt:  rgba($white, .2) !default;
+
+$accordion-icon-color-lt:                 $body-color-lt !default;
+$accordion-icon-active-color-lt:          $body-color-lt !default;
+
+$accordion-button-icon-lt:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color-lt}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
+$accordion-button-active-icon-lt:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color-lt}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
+
+
+$accordion-theme-map: (
+  "accordion-button-color":               $accordion-button-color-lt,
+  "accordion-button-bg":                  $accordion-button-bg-lt,
+  "accordion-bg":                         $accordion-bg-lt,
+  "accordion-border-color":               $accordion-border-color-lt,
+  "accordion-button-active-bg":           $accordion-button-active-bg-lt,
+  "accordion-button-active-color":        $accordion-button-active-color-lt,
+  "accordion-button-focus-border-color":  $accordion-button-focus-border-color-lt,
+  "accordion-button-icon":                $accordion-button-icon-lt,
+  "accordion-button-active-icon":         $accordion-button-active-icon-lt
+) !default;
+
+// Alert
+
+$alert-variants-lt: (
+  "primary":    alert-color-map($primary-lt),
+  "secondary":  alert-color-map($secondary-lt),
+  "success":    alert-color-map($success-lt),
+  "danger":     alert-color-map($danger-lt),
+  "warning":    alert-color-map($warning-lt),
+  "info":       alert-color-map($info-lt)
+) !default;
+
+// Breadcrumb
+
+$breadcrumb-bg-lt:             null !default;
+$breadcrumb-divider-color-lt:  $body-color-lt !default;
+$breadcrumb-active-color-lt:   $gray-600-lt !default;
+
+$breadcrumb-theme-map: (
+  "breadcrumb-bg":             $breadcrumb-bg-lt,
+  "breadcrumb-divider-color":  $breadcrumb-divider-color-lt,
+  "breadcrumb-active-color":   $breadcrumb-active-color-lt
+) !default;
+
+// Buttons
+
+$button-variants-lt: (
+  "primary":    btn-color-map($primary-lt, $primary-lt),
+  "secondary":  btn-color-map($secondary-lt, $secondary-lt),
+  "success":    btn-color-map($success-lt, $success-lt),
+  "danger":     btn-color-map($danger-lt, $danger-lt),
+  "warning":    btn-color-map($warning-lt, $warning-lt),
+  "info":       btn-color-map($info-lt, $info-lt)
+) !default;
+
+$button-outline-ghost-variants-lt: (
+  "primary":    btn-outline-color-map($primary-lt),
+  "secondary":  btn-outline-color-map($secondary-lt),
+  "success":    btn-outline-color-map($success-lt),
+  "danger":     btn-outline-color-map($danger-lt),
+  "warning":    btn-outline-color-map($warning-lt),
+  "info":       btn-outline-color-map($info-lt)
+) !default;
+
+// Cards
+
+// scss-docs-start card-variables
+$card-bg-lt:            $white !default;
+$card-color-lt:         null !default;
+$card-border-color-lt:  $border-color-lt !default;
+$card-cap-bg-lt:        $gray-100-lt !default;
+$card-cap-color-lt:     null !default;
+
+$card-theme-map: (
+  "card-bg":            $card-bg-lt,
+  "card-color":         $card-color-lt,
+  "card-border-color":  $card-border-color-lt,
+  "card-cap-bg":        $card-cap-bg-lt,
+  "card-cap-color":     $card-cap-color-lt
+) !default;
+// scss-docs-end card-variables
+
+// Close button
+
+$btn-close-color-lt:  $high-emphasis-lt !default;
+$btn-close-bg-lt:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color-lt}'><path d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/></svg>") !default;
+
+$close-theme-map: (
+  "btn-close-color":  $btn-close-color-lt,
+  "btn-close-bg":     $btn-close-bg-lt
+) !default;
+
+// Dropdown
+
+$dropdown-color-lt:                $body-color-lt !default;
+$dropdown-bg-lt:                   $white !default;
+$dropdown-border-color-lt:         $border-color-lt !default;
+$dropdown-divider-bg-lt:           $border-color-lt !default;
+$dropdown-link-color-lt:           $body-color-lt !default;
+$dropdown-link-hover-color-lt:     $body-color-lt !default;
+$dropdown-link-hover-bg-lt:        $gray-100-lt !default;
+$dropdown-link-active-color-lt:    $component-active-color-lt !default;
+$dropdown-link-active-bg-lt:       $component-active-bg-lt !default;
+$dropdown-link-disabled-color-lt:  rgba($body-color-lt, .6) !default;
+$dropdown-header-color-lt:         $body-color-lt !default;
+
+$dropdown-theme-map: (
+  "dropdown-color":                $dropdown-color-lt,
+  "dropdown-border-color":         $dropdown-border-color-lt,
+  "dropdown-bg":                   $dropdown-bg-lt,
+  "dropdown-divider-bg":           $dropdown-divider-bg-lt,
+  "dropdown-link-color":           $dropdown-link-color-lt,
+  "dropdown-link-hover-color":     $dropdown-link-hover-color-lt,
+  "dropdown-link-hover-bg":        $dropdown-link-hover-bg-lt,
+  "dropdown-link-active-color":    $dropdown-link-active-color-lt,
+  "dropdown-link-active-bg":       $dropdown-link-active-bg-lt,
+  "dropdown-link-disabled-color":  $dropdown-link-disabled-color-lt,
+  "dropdown-header-color":         $dropdown-header-color-lt
+) !default;
+
+// Footer
+
+$footer-bg-lt:            $gray-100-lt !default;
+$footer-color-lt:         $body-color-lt !default;
+$footer-border-width-lt:  0 !default;
+$footer-border-color-lt:  $border-color-lt !default;
+
+$footer-theme-map: (
+  "footer-bg":            $footer-bg-lt,
+  "footer-color":         $footer-color-lt,
+  "footer-border-width":  $footer-border-width-lt,
+  "footer-border-color":  $footer-border-color-lt
+) !default;
+
+// Forms
+
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+$input-color-lt:                     $body-color-lt !default;
+$input-bg-lt:                        $white !default;
+$input-border-color-lt:              $border-color-lt !default;
+$input-focus-color-lt:               $body-color-lt !default;
+$input-focus-bg-lt:                  $input-color-lt !default;
+$input-focus-border-color-lt:        tint-color($component-active-bg-lt, 25%) !default;
+$input-disabled-bg-lt:               rgba($white, .1) !default;
+$input-placeholder-color-lt:         $medium-emphasis-lt !default;
+$input-plaintext-color-lt:           $body-color-lt !default;
+
+$form-text-color-lt:                 $medium-emphasis-lt !default;
+
+$input-group-addon-color-lt:         $body-color-lt !default;
+$input-group-addon-bg-lt:            $gray-100-lt !default;
+$input-group-addon-border-color-lt:  $input-border-color-lt !default;
+
+$form-select-color-lt:               $input-color-lt !default;
+$form-select-bg-lt:                  $input-bg-lt !default;
+$form-select-border-color-lt:        $input-border-color-lt !default;
+$form-select-focus-border-color-lt:        $input-focus-border-color-lt !default;
+// $form-select-disabled-color-lt:         $input-disabled-color-lt !default;
+$form-select-disabled-bg-lt:            $input-disabled-bg-lt !default;
+// $form-select-disabled-border-color-lt:  $input-disabled-border-color-lt !default;
+
+$form-check-input-checked-color-lt:          $component-active-color-lt !default;
+$form-check-input-checked-bg-color-lt:       $component-active-bg-lt !default;
+$form-check-input-checked-border-color-lt:   $form-check-input-checked-bg-color-lt !default;
+
+$form-control-theme-map: (
+  "input-color":                            $input-color-lt,
+  "input-bg":                               $input-bg-lt,
+  "input-border-color":                     $input-border-color-lt,
+  "input-focus-color":                      $input-focus-color-lt,
+  "input-focus-bg":                         $input-focus-bg-lt,
+  "input-focus-border-color":               $input-focus-border-color-lt,
+  "input-disabled-bg":                      $input-disabled-bg-lt,
+  "input-placeholder-color":                $input-placeholder-color-lt,
+  "input-plaintext-color":                  $input-plaintext-color-lt,
+  "form-text-color":                        $form-text-color-lt,
+) !default;
+
+$input-group-theme-map: (
+  "input-group-addon-color":         $input-group-addon-color-lt,
+  "input-group-addon-bg":            $input-group-addon-bg-lt,
+  "input-group-addon-border-color":  $input-group-addon-border-color-lt
+) !default;
+
+$form-check-theme-map: (
+  "form-check-input-checked-color":         $form-check-input-checked-color-lt,
+  "form-check-input-checked-bg-color":      $form-check-input-checked-bg-color-lt,
+  "form-check-input-checked-border-color":  $form-check-input-checked-border-color-lt
+) !default;
+
+$form-select-theme-map: (
+  "form-select-color":                  $form-select-color-lt,
+  "form-select-bg":                     $form-select-bg-lt,
+  "form-select-border-color":           $form-select-border-color-lt,
+  "form-select-focus-border-color":     $form-select-focus-border-color-lt,
+  // "form-select-disabled-color":         $form-select-disabled-color-lt,
+  "form-select-disabled-bg":            $form-select-disabled-bg-lt,
+  // "form-select-disabled-border-color":  $form-select-disabled-border-color-lt,
+) !default;
+
+$form-multi-select-color-lt:               $input-color-lt !default;
+$form-multi-select-bg-lt:                  $input-bg-lt !default;
+$form-multi-select-border-color-lt:        $input-border-color-lt !default;
+
+$form-multi-select-focus-color-lt:         $input-focus-color-lt !default;
+$form-multi-select-focus-bg-lt:            $input-focus-bg-lt !default;
+$form-multi-select-focus-border-color-lt:  $input-focus-border-color-lt !default;
+
+$form-multi-select-disabled-color-lt:      $disabled-lt !default;
+$form-multi-select-disabled-bg-lt:         $input-disabled-bg-lt !default;
+
+$form-multi-select-tag-bg-lt:               $light-lt !default;
+$form-multi-select-tag-border-color-lt:     $input-border-color-lt !default;
+
+$form-multi-select-search-color-lt:         $input-color-lt !default;
+$form-multi-select-search-bg-lt:            transparent !default;
+$form-multi-select-search-border-color-lt:  $input-border-color-lt !default;
+
+$form-multi-select-cleaner-color-lt:         $medium-emphasis-lt !default;
+$form-multi-select-cleaner-bg-lt:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$form-multi-select-cleaner-color-lt}'><path d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/></svg>") !default;
+$form-multi-select-cleaner-hover-color-lt:   $high-emphasis-lt !default;
+$form-multi-select-cleaner-hover-bg-lt:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$form-multi-select-cleaner-hover-color-lt}'><path d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/></svg>") !default;
+$form-multi-select-cleaner-focus-color-lt:   $high-emphasis-lt !default;
+$form-multi-select-cleaner-focus-bg-lt:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$form-multi-select-cleaner-focus-color-lt}'><path d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/></svg>") !default;
+$form-multi-select-cleaner-border-color-lt:  $input-border-color-lt !default;
+
+$form-multi-select-select-all-color-lt:         $medium-emphasis-lt !default;
+$form-multi-select-select-all-bg-lt:            transparent !default;
+$form-multi-select-select-all-hover-color-lt:   $high-emphasis-lt !default;
+$form-multi-select-select-all-hover-bg-lt:      transparent !default;
+$form-multi-select-select-all-border-color-lt:  $input-border-color-lt !default;
+
+$form-multi-select-options-color-lt:         $body-color-lt !default;
+$form-multi-select-options-bg-lt:            $bg-elevation-8 !default;
+$form-multi-select-options-border-color-lt:  $input-border-color-lt !default;
+
+$form-multi-select-option-hover-color-lt:    $body-color-lt !default;
+$form-multi-select-option-hover-bg-lt:       $light-lt !default;
+
+$form-multi-select-option-selected-bg-lt:    $light-lt !default;
+
+$form-multi-select-theme-map: (
+  "form-multi-select-color":                    $form-multi-select-color-lt,
+  "form-multi-select-bg":                       $form-multi-select-bg-lt,
+  "form-multi-select-border-color":             $form-multi-select-border-color-lt,
+  "form-multi-select-disabled-color":           $form-multi-select-disabled-color-lt,
+  "form-multi-select-disabled-bg":              $form-multi-select-disabled-bg-lt,
+  "form-multi-select-focus-color":              $form-multi-select-focus-color-lt,
+  "form-multi-select-focus-bg":                 $form-multi-select-focus-bg-lt,
+  "form-multi-select-focus-border-color":       $form-multi-select-focus-border-color-lt,
+  "form-multi-select-tag-bg":                   $form-multi-select-tag-bg-lt,
+  "form-multi-select-tag-border-color":         $form-multi-select-tag-border-color-lt,
+  "form-multi-select-search-color":             $form-multi-select-search-color-lt,
+  "form-multi-select-search-bg":                $form-multi-select-search-bg-lt,
+  "form-multi-select-search-border-color":      $form-multi-select-search-border-color-lt,
+  "form-multi-select-cleaner-bg":               $form-multi-select-cleaner-bg-lt,
+  "form-multi-select-cleaner-hover-bg":         $form-multi-select-cleaner-hover-bg-lt,
+  "form-multi-select-cleaner-focus-bg":         $form-multi-select-cleaner-focus-bg-lt,
+  "form-multi-select-cleaner-border-color":     $form-multi-select-cleaner-border-color-lt,
+  "form-multi-select-select-all-color":         $form-multi-select-select-all-color-lt,
+  "form-multi-select-select-all-bg":            $form-multi-select-select-all-bg-lt,
+  "form-multi-select-select-all-hover-color":   $form-multi-select-select-all-hover-color-lt,
+  "form-multi-select-select-all-hover-bg":      $form-multi-select-select-all-hover-bg-lt,
+  "form-multi-select-select-all-border-color":  $form-multi-select-select-all-border-color-lt,
+  "form-multi-select-options-color":            $form-multi-select-options-color-lt,
+  "form-multi-select-options-bg":               $form-multi-select-options-bg-lt,
+  "form-multi-select-options-border-color":     $form-multi-select-options-border-color-lt,
+  "form-multi-select-option-hover-color":       $form-multi-select-option-hover-color-lt,
+  "form-multi-select-option-hover-bg":          $form-multi-select-option-hover-bg-lt,
+  "form-multi-select-option-selected-bg":       $form-multi-select-option-selected-bg-lt,
+) !default;
+
+// Header
+
+$header-bg-lt:                     $white !default;
+$header-color-lt:                  rgba($black, .5) !default;
+$header-border-lt:                 ( bottom: 1px solid $border-color-lt ) !default;
+$header-hover-color-lt:            rgba($black, .7) !default;
+$header-active-color-lt:           rgba($black, .9) !default;
+$header-disabled-color-lt:         rgba($black, .3) !default;
+$header-brand-color-lt:            $header-active-color-lt !default;
+$header-brand-hover-color-lt:      $header-active-color-lt !default;
+$header-toggler-icon-bg-lt:        str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$header-color-lt}' stroke-width='2.25' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
+$header-toggler-hover-icon-bg-lt:  str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$header-hover-color-lt}' stroke-width='2.25' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
+$header-toggler-border-color-lt:   rgba($black, .1) !default;
+$header-divider-border-color-lt:   rgba($black, .1) !default;
+
+$header-theme-map: (
+  "header-bg":                     $header-bg-lt,
+  "header-color":                  $header-color-lt,
+  "header-border":                 $header-border-lt,
+  "header-hover-color":            $header-hover-color-lt,
+  "header-active-color":           $header-active-color-lt,
+  "header-disabled-color":         $header-disabled-color-lt,
+  "header-brand-color":            $header-brand-color-lt,
+  "header-brand-hover-color":      $header-brand-hover-color-lt,
+  "header-toggler-icon-bg":        $header-toggler-icon-bg-lt,
+  "header-toggler-hover-icon-bg":  $header-toggler-hover-icon-bg-lt,
+  "header-toggler-border-color":   $header-toggler-border-color-lt,
+  "header-divider-border-color":   $header-divider-border-color-lt
+) !default;
+
+// Links
+
+$link-color-lt:                    shift-color($primary-lt, -12) !default;
+$link-hover-color-lt:              shift-color($link-color-lt, -20) !default;
+
+$link-theme-map: (
+  "link-color":        $link-color-lt,
+  "link-hover-color":  $link-hover-color-lt
+) !default;
+
+
+// List group
+
+// scss-docs-start list-group-dark-theme
+$list-group-color-lt:                $body-color-lt !default;
+$list-group-bg-lt:                   inherit !default;
+$list-group-border-color-lt:         $border-color-lt !default;
+$list-group-hover-bg-lt:             $gray-100-lt !default;
+$list-group-active-color-lt:         $component-active-color-lt !default;
+$list-group-active-bg-lt:            $component-active-bg-lt !default;
+$list-group-active-border-color-lt:  $list-group-active-bg-lt !default;
+$list-group-disabled-color-lt:       $gray-600-lt !default;
+$list-group-disabled-bg-lt:          $list-group-bg-lt !default;
+$list-group-action-color-lt:         $body-color-lt !default;
+$list-group-action-hover-color-lt:   $body-color-lt !default;
+$list-group-action-active-color-lt:  $body-color-lt !default;
+$list-group-action-active-bg-lt:     $gray-200-lt !default;
+// scss-docs-end list-group-dark-theme
+
+$list-group-theme-map: (
+  "list-group-color":                $list-group-color-lt,
+  "list-group-bg":                   $list-group-bg-lt,
+  "list-group-border-color":         $list-group-border-color-lt,
+  "list-group-hover-bg":             $list-group-hover-bg-lt,
+  "list-group-active-color":         $list-group-active-color-lt,
+  "list-group-active-bg":            $list-group-active-bg-lt,
+  "list-group-active-border-color":  $list-group-active-border-color-lt,
+  "list-group-disabled-color":       $list-group-disabled-color-lt,
+  "list-group-disabled-bg":          $list-group-disabled-bg-lt,
+  "list-group-action-color":         $list-group-action-color-lt,
+  "list-group-action-hover-color":   $list-group-action-hover-color-lt,
+  "list-group-action-active-color":  $list-group-action-active-color-lt,
+  "list-group-action-active-bg":     $list-group-action-active-bg-lt
+) !default;
+
+$list-group-variants-lt: (
+  "primary":    list-group-color-map($primary-lt),
+  "secondary":  list-group-color-map($secondary-lt),
+  "success":    list-group-color-map($success-lt),
+  "danger":     list-group-color-map($danger-lt),
+  "warning":    list-group-color-map($warning-lt),
+  "info":       list-group-color-map($info-lt)
+) !default;
+
+// Modals
+
+// Dark theme
+// scss-docs-start modal-dark-theme
+$modal-content-color-lt:         null !default;
+$modal-content-bg-lt:            $bg-elevation-24 !default;
+$modal-content-border-color-lt:  rgba(0, 0, 0, .2) !default;
+$modal-header-border-color-lt:   rgba(0, 0, 0, .2) !default;
+$modal-footer-border-color-lt:   rgba(0, 0, 0, .2) !default;
+// scss-docs-end modal-dark-theme
+
+$modal-theme-map: (
+  "modal-content-color":         $modal-content-color-lt,
+  "modal-content-bg":            $modal-content-bg-lt,
+  "modal-content-border-color":  $modal-content-border-color-lt,
+  "modal-header-border-color":   $modal-header-border-color-lt,
+  "modal-footer-border-color":   $modal-footer-border-color-lt
+) !default;
+
+
+// Navs
+
+$nav-link-color-lt:                          null !default;
+$nav-link-disabled-color-lt:                 $disabled-lt !default;
+$nav-link-hover-color-lt:                    null !default;
+$nav-pills-link-active-bg-lt:                $component-active-bg-lt !default;
+$nav-pills-link-active-color-lt:             $component-active-color-lt !default;
+$nav-tabs-border-color-lt:                   $border-color-lt !default;
+$nav-tabs-link-active-bg-lt:                 $border-color-lt !default;
+$nav-tabs-link-active-color-lt:              $body-color-lt !default;
+$nav-tabs-link-active-border-color-lt:       transparent !default;
+$nav-tabs-link-hover-border-color-lt:        $border-color-lt $border-color-lt $border-color-lt !default;
+
+$nav-underline-border-color-lt:              $border-color-lt !default;
+$nav-underline-link-color-lt:                $medium-emphasis-lt !default;
+$nav-underline-link-active-color-lt:         $component-active-bg-lt !default;
+$nav-underline-link-active-border-color-lt:  $component-active-bg-lt !default;
+
+
+$nav-theme-map: (
+  "nav-link-color":                          $nav-link-color-lt,
+  "nav-link-disabled-color":                 $nav-link-disabled-color-lt,
+  "nav-link-hover-color":                    $nav-link-hover-color-lt,
+  "nav-pills-link-active-bg":                $nav-pills-link-active-bg-lt,
+  "nav-pills-link-active-color":             $nav-pills-link-active-color-lt,
+  "nav-tabs-border-color":                   $nav-tabs-border-color-lt,
+  "nav-tabs-link-active-bg":                 $nav-tabs-link-active-bg-lt,
+  "nav-tabs-link-active-color":              $nav-tabs-link-active-color-lt,
+  "nav-tabs-link-active-border-color":       $nav-tabs-link-active-border-color-lt,
+  "nav-tabs-link-hover-border-color":        $nav-tabs-link-hover-border-color-lt,
+  "nav-underline-border-color":              $nav-underline-border-color-lt,
+  "nav-underline-link-color":                $nav-underline-link-color-lt,
+  "nav-underline-link-active-color":         $nav-underline-link-active-color-lt,
+  "nav-underline-link-active-border-color":  $nav-underline-link-active-border-color-lt
+) !default;
+
+// Pagination
+// scss-docs-start pagination-variables
+
+$pagination-color-lt:                  $link-color-lt !default;
+$pagination-bg-lt:                     transparent !default;
+$pagination-border-color-lt:           $border-color-lt !default;
+
+$pagination-focus-color-lt:            $link-hover-color-lt !default;
+$pagination-focus-bg-lt:               $border-color-lt !default;
+
+$pagination-hover-color-lt:            $link-hover-color-lt !default;
+$pagination-hover-bg-lt:               $border-color-lt !default;
+$pagination-hover-border-color-lt:     $border-color-lt !default;
+
+$pagination-active-color-lt:           $component-active-color-lt !default;
+$pagination-active-bg-lt:              $component-active-bg-lt !default;
+$pagination-active-border-color-lt:    $pagination-active-bg-lt !default;
+
+$pagination-disabled-color-lt:         $disabled-lt !default;
+$pagination-disabled-bg-lt:            transparent !default;
+$pagination-disabled-border-color-lt:  $border-color-lt !default;
+
+$pagination-theme-map: (
+  "pagination-color":                  $pagination-color-lt,
+  "pagination-bg":                     $pagination-bg-lt,
+  "pagination-border-color":           $pagination-border-color-lt,
+  "pagination-focus-color":            $pagination-focus-color-lt,
+  "pagination-focus-bg":               $pagination-focus-bg-lt,
+  "pagination-hover-color":            $pagination-hover-color-lt,
+  "pagination-hover-bg":               $pagination-hover-bg-lt,
+  "pagination-hover-border-color":     $pagination-hover-border-color-lt,
+  "pagination-active-color":           $pagination-active-color-lt,
+  "pagination-active-bg-lt":           $pagination-active-bg-lt,
+  "pagination-active-border-color":    $pagination-active-border-color-lt,
+  "pagination-disabled-color":         $pagination-disabled-color-lt,
+  "pagination-disabled-bg":            $pagination-disabled-bg-lt,
+  "pagination-disabled-border-color":  $pagination-disabled-border-color-lt
+) !default;
+
+
+// Popovers
+
+// scss-docs-start popover-dark-theme
+$popover-bg-lt:                 $bg-elevation-16 !default;
+$popover-border-color-lt:       $border-color-lt !default;
+$popover-header-bg-lt:          $bg-elevation-16 !default;
+$popover-header-color-lt:       $body-color-lt !default;
+$popover-body-color-lt:         $body-color-lt !default;
+$popover-arrow-color-lt:        $popover-bg-lt !default;
+$popover-arrow-outer-color-lt:  fade-in($popover-border-color-lt, .05) !default;
+// scss-docs-end popover-dark-theme
+
+$popover-theme-map: (
+  "popover-bg":                 $popover-bg-lt,
+  "popover-border-color":       $popover-border-color-lt,
+  "popover-header-bg":          $popover-header-bg-lt,
+  "popover-header-color":       $popover-header-color-lt,
+  "popover-body-color":         $popover-body-color-lt,
+  "popover-arrow-color":        $popover-arrow-color-lt,
+  "popover-arrow-outer-color":  $popover-arrow-outer-color-lt
+) !default;
+
+
+// Progress
+
+$progress-bg-lt:         $gray-100-lt !default;
+$progress-bar-bg-lt:     $primary-lt !default;
+
+$progress-theme-map: (
+  "progress-bg":         $progress-bg-lt,
+  "progress-bar-bg":     $progress-bar-bg-lt,
+) !default;
+
+// Sidebar
+
+$sidebar-color-lt:                    $white !default;
+$sidebar-bg-lt:                       $gray-800-lt !default;
+$sidebar-border-width-lt:             0 !default;
+$sidebar-border-color-lt:             transparent !default;
+$sidebar-brand-color-lt:              $body-color-lt !default;
+$sidebar-brand-bg-lt:                 $white !default;
+$sidebar-footer-bg-lt:                rgba($black, .2) !default;
+$sidebar-header-bg-lt:                rgba($black, .2) !default;
+$sidebar-toggler-bg-lt:               rgba($black, .2) !default;
+$sidebar-toggler-hover-bg-lt:         rgba($black, .3) !default;
+$sidebar-nav-title-color-lt:                 rgba($white, .6) !default;
+$sidebar-nav-link-color-lt:                  rgba($white, .8) !default;
+$sidebar-nav-link-bg-lt:                     transparent !default;
+$sidebar-nav-link-icon-color-lt:             rgba($white, .5) !default;
+$sidebar-nav-link-hover-color-lt:            $white !default;
+$sidebar-nav-link-hover-bg-lt:               $primary-lt !default;
+$sidebar-nav-link-hover-icon-color-lt:       $white !default;
+
+$sidebar-nav-link-active-color-lt:           $white !default;
+$sidebar-nav-link-active-bg-lt:              rgba($white, .05) !default;
+$sidebar-nav-link-active-icon-color-lt:      $white !default;
+
+$sidebar-nav-link-disabled-color-lt:         rgba($white, .5) !default;
+$sidebar-nav-link-disabled-icon-color-lt:    rgba($white, .6) !default;
+
+$sidebar-nav-group-bg-lt:                    rgba(0, 0, 0, .2) !default;
+$sidebar-nav-group-toggle-show-color-lt:     $sidebar-nav-link-color-lt !default;
+
+$sidebar-nav-group-indicator-color-lt:        rgba($white, .5) !default;
+$sidebar-nav-group-indicator-icon-lt:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$sidebar-nav-group-indicator-color-lt}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
+$sidebar-nav-group-indicator-hover-color-lt:  $sidebar-nav-link-hover-color-lt !default;
+$sidebar-nav-group-indicator-hover-icon-lt:   url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$sidebar-nav-group-indicator-hover-color-lt}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
+
+$sidebar-theme-map: (
+  "sidebar-color":                            $sidebar-color-lt,
+  "sidebar-bg":                               $sidebar-bg-lt,
+  "sidebar-border-width":                     $sidebar-border-width-lt,
+  "sidebar-border-color":                     $sidebar-border-color-lt,
+  "sidebar-brand-color":                      $sidebar-brand-color-lt,
+  "sidebar-brand-bg":                         $sidebar-brand-bg-lt,
+  "sidebar-footer-bg":                        $sidebar-footer-bg-lt,
+  "sidebar-header-bg":                        $sidebar-header-bg-lt,
+  "sidebar-toggler-bg":                       $sidebar-toggler-bg-lt,
+  "sidebar-toggler-hover-bg":                 $sidebar-toggler-hover-bg-lt,
+  "sidebar-nav-title-color":                  $sidebar-nav-title-color-lt,
+  "sidebar-nav-link-color":                   $sidebar-nav-link-color-lt,
+  "sidebar-nav-link-bg":                      $sidebar-nav-link-bg-lt,
+  "sidebar-nav-link-icon-color":              $sidebar-nav-link-icon-color-lt,
+  "sidebar-nav-link-hover-color":             $sidebar-nav-link-hover-color-lt,
+  "sidebar-nav-link-hover-bg":                $sidebar-nav-link-hover-bg-lt,
+  "sidebar-nav-link-hover-icon-color":        $sidebar-nav-link-hover-icon-color-lt,
+  "sidebar-nav-link-active-color":            $sidebar-nav-link-active-color-lt,
+  "sidebar-nav-link-active-bg":               $sidebar-nav-link-active-bg-lt,
+  "sidebar-nav-link-active-icon-color":       $sidebar-nav-link-active-icon-color-lt,
+  "sidebar-nav-link-disabled-color":          $sidebar-nav-link-disabled-color-lt,
+  "sidebar-nav-link-disabled-icon-color":     $sidebar-nav-link-disabled-icon-color-lt,
+  "sidebar-nav-group-bg":                     $sidebar-nav-group-bg-lt,
+  "sidebar-nav-group-toggle-show-color":      $sidebar-nav-group-toggle-show-color-lt,
+  "sidebar-nav-group-indicator-color":        $sidebar-nav-group-indicator-color-lt,
+  "sidebar-nav-group-indicator-icon":         $sidebar-nav-group-indicator-icon-lt,
+  "sidebar-nav-group-indicator-hover-color":  $sidebar-nav-group-indicator-hover-color-lt,
+  "sidebar-nav-group-indicator-hover-icon":   $sidebar-nav-group-indicator-hover-icon-lt,
+) !default;
+
+$table-color-lt:              $body-color-lt !default;
+$table-bg-lt:                 transparent !default;
+$table-border-color-lt:       $border-color-lt !default;
+
+$table-striped-color-lt:      $table-color-lt !default;
+$table-striped-bg-factor-lt:  .05 !default;
+$table-striped-bg-lt:         rgba($white, $table-striped-bg-factor-lt) !default;
+
+$table-active-color-lt:       $table-color-lt !default;
+$table-active-bg-factor-lt:   .1 !default;
+$table-active-bg-lt:          rgba($black, $table-active-bg-factor-lt) !default;
+
+$table-hover-color-lt:        $table-color-lt !default;
+$table-hover-bg-factor-lt:    .075 !default;
+$table-hover-bg-lt:           rgba($black, $table-hover-bg-factor-lt) !default;
+
+$table-theme-map: (
+  "table-color":          $table-color-lt,
+  "table-bg":             $table-bg-lt,
+  "table-border-color":   $table-border-color-lt,
+  "table-striped-color":  $table-striped-color-lt,
+  "table-striped-bg":     $table-striped-bg-lt,
+  "table-active-color":   $table-active-color-lt,
+  "table-active-bg":      $table-active-bg-lt,
+  "table-hover-color":    $table-hover-color-lt,
+  "table-hover-bg":       $table-hover-bg-lt
+) !default;
+
+$table-variants-lt: (
+  "primary":    table-color-map(shift-color($primary-lt, $table-bg-scale)),
+  "secondary":  table-color-map(shift-color($secondary-lt, $table-bg-scale)),
+  "success":    table-color-map(shift-color($success-lt, $table-bg-scale)),
+  "info":       table-color-map(shift-color($info-lt, $table-bg-scale)),
+  "warning":    table-color-map(shift-color($warning-lt, $table-bg-scale)),
+  "danger":     table-color-map(shift-color($danger-lt, $table-bg-scale)),
+  "light":      table-color-map($light-lt, $body-bg-lt),
+  "dark":       table-color-map($dark-lt, $body-bg-lt)
+) !default;
+
+// Toast
+
+$toast-background-color-lt:         $bg-elevation-16 !default;
+$toast-color-lt:                    $body-color-lt !default;
+$toast-border-color-lt:             transparent !default;
+
+$toast-header-color-lt:             $body-color-lt !default;
+$toast-header-background-color-lt:  $bg-elevation-24 !default;
+$toast-header-border-color-lt:      rgba($black, .2) !default;
+
+$toast-theme-map: (
+  "toast-background-color":         $toast-background-color-lt,
+  "toast-color":                    $toast-color-lt,
+  "toast-border-color":             $toast-border-color-lt,
+  "toast-header-color":             $toast-header-color-lt,
+  "toast-header-background-color":  $toast-header-background-color-lt,
+  "toast-header-border-color":      $toast-header-border-color-lt
+) !default;
+
+$theme-map: (
+  "root":               map-merge($theme-root-lt, $link-theme-map),
+  "utilities": (
+    "bg":               $theme-colors-lt,
+    "text":             $theme-colors-lt
+  ),
+  "accordion":          $accordion-theme-map,
+  "breadcrumb":         $breadcrumb-theme-map,
+  "btn-close":          $close-theme-map,
+  "card":               $card-theme-map,
+  "dropdown-menu":      $dropdown-theme-map,
+  "footer":             $footer-theme-map,
+  "form-control":       $form-control-theme-map,
+  "form-check":         $form-check-theme-map,
+  "form-select":        $form-select-theme-map,
+  "form-multi-select":  $form-multi-select-theme-map,
+  "header":             $header-theme-map,
+  "input-group":        $input-group-theme-map,
+  "list-group":         $list-group-theme-map,
+  "modal":              $modal-theme-map,
+  "nav":                $nav-theme-map,
+  "pagination":         $pagination-theme-map,
+  "popover":            $popover-theme-map,
+  "progress":           $progress-theme-map,
+  "sidebar":            $sidebar-theme-map,
+  "table":              map-merge($table-theme-map, $table-variants-lt),
+  "toast":              $toast-theme-map
+) !default;
