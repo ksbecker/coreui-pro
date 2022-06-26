@@ -5,8 +5,7 @@
  */
 
 import {
-  defineJQueryPlugin,
-  typeCheckConfig
+  defineJQueryPlugin
 } from './util/index'
 import Data from './dom/data'
 import EventHandler from './dom/event-handler'
@@ -137,7 +136,7 @@ class LoadingButton extends BaseComponent {
       ...Manipulator.getDataAttributes(this._element),
       ...(typeof config === 'object' ? config : {})
     }
-    typeCheckConfig(NAME, config, DefaultType)
+
     return config
   }
 

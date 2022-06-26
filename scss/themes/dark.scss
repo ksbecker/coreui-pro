@@ -1,6 +1,7 @@
 @import "./../functions";
 @import "./../mixins";
 @import "./../variables";
+@import "./../maps";
 @import "./../utilities";
 
 $theme-name: "dark-theme" !default;
@@ -12,13 +13,13 @@ $theme-prefix: "dark" !default;
 
   // Colors
   @each $color, $value in $theme-colors-dt {
-    --#{$variable-prefix}#{$color}: #{$value};
+    --#{$prefix}#{$color}: #{$value};
   }
 
   // Gradients
   @each $color, $map in $theme-gradients-dt {
-    --#{$variable-prefix}#{$color}-start: #{map-get($map, "start")};
-    --#{$variable-prefix}#{$color}-stop: #{map-get($map, "stop")};
+    --#{$prefix}#{$color}-start: #{map-get($map, "start")};
+    --#{$prefix}#{$color}-stop: #{map-get($map, "stop")};
   }
 
   @include theme($theme-map);
@@ -26,27 +27,41 @@ $theme-prefix: "dark" !default;
   // Button variants
 
   @each $state, $variant in $alert-variants-dt {
-    @include alert-variant($state, $variant, true);
+    $alert-background: map-get($variant, "alert-bg");
+    $alert-border: map-get($variant, "alert-border");
+    $alert-color: map-get($variant, "alert-color");
+
+    .alert-#{$state} {
+      @include alert-variant($alert-background, $alert-border, $alert-color);
+    }
   }
 
   // Button variants
 
   @each $state, $variant in $button-variants-dt {
-    @include button-variant($state, $variant, true);
+    .btn-#{$state} {
+      @include button-variant($variant);
+    }
   }
 
   @each $state, $variant in $button-outline-ghost-variants-dt {
-    @include button-outline-variant($state, $variant, true);
+    .btn-outline-#{$state} {
+      @include button-outline-variant($variant);
+    }
   }
 
   @each $state, $variant in $button-outline-ghost-variants-dt {
-    @include button-ghost-variant($state, $variant, true);
+    .btn-ghost-#{$state} {
+      @include button-ghost-variant($variant);
+    }
   }
 
   // List group variants
 
   @each $state, $variant in $list-group-variants-dt {
-    @include list-group-item-variant($state, $variant, true);
+    .list-group-item-#{$state} {
+      @include list-group-item-variant($state, $variant);
+    }
   }
 
   // Utilities
